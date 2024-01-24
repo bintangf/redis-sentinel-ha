@@ -4,7 +4,7 @@ services:
   redis-ui:
     image: patrikx3/p3x-redis-ui:latest
     ports:
-      - 443:7843
+      - 80:7843
     depends_on:
       - redis-master
     volumes:
