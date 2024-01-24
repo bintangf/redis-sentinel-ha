@@ -6,7 +6,7 @@
             "host": "34.101.237.171",
             "port": 6379,
             "password": "",
-            "id": "P3Xid7d4b8112d8101000641007aa5d5451"
+            "id": "P1Xid7d4b8112d8101000641007aa5d5451"
         },
         {
             "name": "redis-b",
@@ -14,6 +14,13 @@
             "port": 6379,
             "password": "",
             "id": "P2Xid7d4b8112d8101000641007aa5d5451"
+        },
+        {
+            "name": "redis-c",
+            "host": "34.101.90.64",
+            "port": 6379,
+            "password": "",
+            "id": "P3Xid7d4b8112d8101000641007aa5d5451"
         }
     ]
 }
