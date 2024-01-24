@@ -1,9 +1,9 @@
 version: '3.7'
-x: &redis_master_ip 34.101.237.171
+
 services:
   redis-slave:
     image: redis:7.0.5
-    command: redis-server --slaveof *redis_master_ip 6379
+    command: redis-server --slaveof 34.101.237.171 6379
     ports:
       - "6379:6379"
     volumes:
@@ -13,6 +13,6 @@ services:
     build: 
       context: ./redis-sentinel
     environment:
-      - REDIS_MASTER_IP=*redis_master_ip
+      - REDIS_MASTER_IP=34.101.237.171
     ports:
       - "26379:26379"
