@@ -2,8 +2,15 @@
     "update": "2022-10-07T14:18:28.315Z",
     "list": [
         {
-            "name": "sentinels-setup",
-            "host": "redis-master",
+            "name": "redis-a",
+            "host": "34.101.237.171",
+            "port": 6379,
+            "password": "",
+            "id": "unique"
+        },
+        {
+            "name": "redis-b",
+            "host": "34.101.98.101",
             "port": 6379,
             "password": "",
             "id": "unique"

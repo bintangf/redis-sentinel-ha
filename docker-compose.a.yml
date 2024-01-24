@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  redis-ui:
+    image: patrikx3/p3x-redis-ui:latest
+    ports:
+      - 443:7843
+    depends_on:
+      - redis-master
+    volumes:
+      - ./p3x-redis-ui-settings:/settings
+
+  redis-master:
+    image: redis:7.0.5
+    volumes:
+      - "./.data:/data"
+    ports:
+      - "6379:6379"
+
+  redis-sentinel:
+    build: 
+      context: ./redis-sentinel
+    environment:
+      - REDIS_MASTER_IP=34.101.237.171
+    ports:
+      - "26379:26379"
+    links:
+      - redis-master
