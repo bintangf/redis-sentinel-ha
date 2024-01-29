@@ -21,7 +21,10 @@ services:
     build: 
       context: ./redis-sentinel
     environment:
-      - REDIS_MASTER_IP=34.101.237.171
+      - REDIS_MASTER_IP=34.128.110.64
+      - SENTINEL_QUORUM=2
+      - SENTINEL_DOWN_AFTER=1000
+      - SENTINEL_FAILOVER=1000
     ports:
       - "26379:26379"
     links:
