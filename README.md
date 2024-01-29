@@ -6,7 +6,7 @@ For more information and an explanation, see: https://www.developers-notebook.co
 
 # Topology
 
-![Redis Sentinel - Topology](redis-sentinel.svg)
+![Redis Sentinel - Topology](redis-sentinel.png)
 
 # Redis UI
 
