@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  ui:
+    image: patrikx3/p3x-redis-ui:latest
+    ports:
+      - 7843:7843
+    volumes:
+      - ./p3x-redis-ui-settings:/settings
