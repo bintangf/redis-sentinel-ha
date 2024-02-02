@@ -1,5 +1,9 @@
-FROM redis:7.0.5
- 
+FROM redis:6-alpine
+
+ENV SENTINEL_QUORUM 2
+ENV SENTINEL_DOWN_AFTER 1000
+ENV SENTINEL_FAILOVER 1000
+
 RUN mkdir -p /redis
  
 WORKDIR /redis
